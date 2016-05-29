@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
-import { ManagingBodyListComponent } from '../managing-body-list/managing-body-list.component';
-
 @Component({
-  selector: 'op-home',
+  selector: 'wot-home',
   templateUrl: 'app/home/home.component.html',
-  directives: [ManagingBodyListComponent],
+  directives: [],
 })
 
 export class HomeComponent {

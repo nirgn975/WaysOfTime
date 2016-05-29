@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'op-search',
-  templateUrl: 'app/search/search.component.html',
+  selector: 'wot-search',
+  templateUrl: 'app/shared/search/search.component.html',
+  directives: [],
 })
 
 export class SearchComponent {
 
-  constructor() {}
+  constructor() { }
 
 }
