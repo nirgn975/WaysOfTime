@@ -1,38 +1,27 @@
-# Ways Of Time
-The best project in the world! (;
+[![Build Status](https://travis-ci.org/hasadna/open_pension.svg?branch=master)](https://travis-ci.org/hasadna/open_pension)
 
+# Open Pension
+The repo contains the server & the client parts of the Open Pension project.
+Open Pension is [a "Hasadna" project](hasadna.org.il), that aimed to revealing the secrets behind the Israeli pension market.
+
+## Pre Requirements
+1. install [docker](https://www.docker.com/).
+2. install [docker-compose](https://docs.docker.com/compose/install/).
 
 ## Installation
-There is a vagrantfile you can use.
-First clone the project, then enter mapwarper folder by type `cd mapwarper` and type `vagrant up` to get and install the virtual machine - this will also install pip and the libraries and depencies into the virtual machine.
-After that runs, type `vagrant ssh` to login.
+Install the project for development.
 
-Now type `cd /srv/viewer` and migrate the db with the command `python manage.py migrate`, then start python server by type `python manage.py runserver 0.0.0.0:8000&` and enter [http://localhost:8000](http://localhost:8000) to see if it's worked.
+1. `cd server/config` then `cp local_settings.template local_settings.py` and modify it by your local settings.
+2. Run `$ docker-compose up` to build the docker images and run them.
+3. That's it, no step two. Start coding! (:
 
-Create a admin user with the command `python manage.py createsuperuser` and follow the instructions in the terminal. After you finish the inserucations enter to [http://localhost:8000/admin](http://localhost:8000/admin) and login.
-
-Now type `cd /srv/mapwarper` and then start the rails server by type `rails s -b 0.0.0.0 -p 3000&` and enter [http://localhost:3000](http://localhost:3000) to see if it's worked.
-
-Now we need to create a new user in the postgis database so type `rails c` and then create a new user:
-```
-user = User.new
-user.login = "super"
-user.email = "super@superxyz123.com"
-user.password = "12345678"
-user.password_confirmation = "12345678"
-user.save
-
-```
-    if we want to give that user api access we can do that bu executing the following commands:
-```
-        user = User.objects.all()[0]
-        token = Token.object.create(user=u)
-        print(token.key)
-```
-When you'll type the last command (`user.save`) there'll be a url in the console output, copy it to the browser to activate the user, and try to login to the system.
+## Our Stack
+* [Angular 1.x](https://angularjs.org/)
+* [Django 1.9.x](https://www.djangoproject.com/)
+* [PostgreSQL](http://www.postgresql.org/)
 
 ## Contribute
-Just fork and do a pull request (:
+Just fork and do a pull request (;
 
-##License
+## License
 MIT
