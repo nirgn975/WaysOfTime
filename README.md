@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/hasadna/open_pension.svg?branch=master)](https://travis-ci.org/hasadna/open_pension)
+[![Build Status]()
 
-# Open Pension
-The repo contains the server & the client parts of the Open Pension project.
-Open Pension is [a "Hasadna" project](hasadna.org.il), that aimed to revealing the secrets behind the Israeli pension market.
+# Ways Of Time
+Hackita 02 - hasadna.org.il‎
+A project during [Hackita02 program](https://hackita02.hasadna.org.il/). A web application to upload, geotag, and browse the geographic maps collection of the National Library of Israel. The application is written in Python (with Django framework 1.9.x) and TypeScript (Angular 2.x), using leaflet, Material Design and [PostGIS](http://postgis.net/) for Database.
 
 ## Pre Requirements
 1. install [docker](https://www.docker.com/).
@@ -11,14 +11,13 @@ Open Pension is [a "Hasadna" project](hasadna.org.il), that aimed to revealing t
 ## Installation
 Install the project for development.
 
-1. `cd server/config` then `cp local_settings.template local_settings.py` and modify it by your local settings.
-2. Run `$ docker-compose up` to build the docker images and run them.
-3. That's it, no step two. Start coding! (:
+1. Run `$ docker-compose up` to build the docker images and run them.
+2. Open the browser at http://localhost:80.
 
 ## Our Stack
-* [Angular 1.x](https://angularjs.org/)
+* [Angular 2.x](https://angular.io/)
 * [Django 1.9.x](https://www.djangoproject.com/)
-* [PostgreSQL](http://www.postgresql.org/)
+* [PostGIS](http://postgis.net/)
 
 ## Contribute
 Just fork and do a pull request (;
